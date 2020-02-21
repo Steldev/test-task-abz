@@ -27,7 +27,7 @@ class CheerfulUsersContainer extends React.Component {
     }
 
     render() {
-        return <CheerfulUsers
+        return this.props.users.length && <CheerfulUsers
             users={this.props.users}
             message={this.props.message}
             positions={this.props.positions}
