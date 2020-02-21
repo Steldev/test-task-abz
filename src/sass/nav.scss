@@ -1,0 +1,114 @@
+@import "config";
+
+.nav, .nav-spacer, .nav-mobile-back {
+    width: 100%;
+}
+
+.nav, .nav * {
+    display: flex;
+}
+
+.nav, .nav-mobile, .nav-mobile-back {
+    position: fixed;
+}
+
+.nav {
+    z-index: 100;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav hr {
+    margin: 0;
+    border: 0.5px solid lightgray;
+}
+
+.nav-logo {
+    width: 135px;
+    height: 20px;
+    background: url("../assets/logo.svg");
+}
+
+.nav-logo-wrapper {
+    align-items: center;
+}
+
+.nav-link {
+    margin-right: 30px;
+    &.active {
+        color: map-get($colors, "secondary");
+    }
+}
+
+.nav-toggle {
+    margin-right: 30px;
+    height: 15px;
+    width: 20px;
+    background: url("../assets/menu-icon.svg");
+    cursor: pointer;
+}
+
+.nav-mobile-back {
+    z-index: 200;
+    height: 100vh;
+    top: 0;
+    background: rgba(0,0,0,0.5);
+}
+
+.nav-mobile, .nav-list-mobile {
+    flex-direction: column;
+}
+
+@keyframes slide {
+    from {left: -290px;}
+    to {left: 0}
+}
+
+.nav-mobile {
+    z-index: 300;
+    height: 100%;
+    min-width: 290px;
+    overflow: scroll;
+    animation-name: slide;
+    animation-duration: 0.2s;
+}
+
+.nav-list-mobile {
+    padding-left: 15px;
+}
+
+.nav-mobile .nav-item {
+    margin: 15px 0;
+}
+
+@media (min-width: map-get($grid-breakpoints, "xs")) {
+    .nav, .nav-spacer, .nav-logo-wrapper {
+        min-height: $nav-sm-height;
+    }
+    .nav-logo {
+        margin-left: 15px;
+    }
+    .nav-list {
+        display: none;
+    }
+    .nav-toggle {
+        display: flex;
+    }
+}
+@media (min-width: map-get($grid-breakpoints, "sm")) {
+    .nav, .nav-spacer, .nav-logo-wrapper {
+        min-height: $nav-height;
+    }
+    .nav-logo {
+        margin-left: 30px;
+    }
+}
+@media (min-width: map-get($grid-breakpoints, "md")) {
+    .nav-list {
+        display: flex;
+    }
+    .nav-toggle {
+        display: none;
+    }
+}
+

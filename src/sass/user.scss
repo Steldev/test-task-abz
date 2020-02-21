@@ -1,0 +1,22 @@
+.user, .user-wrapper, .button-wrapper {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.user {
+    width: 200px;
+}
+
+.user > img {
+    height: 70px;
+    width: 70px;
+    border-radius: 50%;
+    margin-bottom: 20px;
+    background-image: url("../assets/photo-cover.svg");
+}
+
+.user > p {
+    margin: 0 0 12px 0;
+}

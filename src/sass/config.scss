@@ -1,0 +1,34 @@
+//*** === OPTIONS === ***
+
+$enable-typography:             true !default;
+$enable-background-colors:      true !default;
+$enable-text-colors:            true !default;
+$enable-grid-columns:           true !default;
+
+
+//*** === DESIGN === ***
+
+$nav-height: 60px !default;
+$nav-sm-height: 40px !default;
+
+// Colors for colors.scss
+$colors: (
+        primary:    #ef5b4c,
+        secondary:  #007bff,
+        pearl:     #f9f9f3,
+        white:  #fff,
+) !default;
+
+//*** === GRID === ***
+
+// Grid breakpoints for simple-grid.scss
+$grid-breakpoints: (
+        xs: 0,
+        sm: 361px,
+        md: 769px,
+) !default;
+
+// Grid columns
+$grid-columns:                12 !default;
+$grid-gutter-width:           30px !default;
+$grid-gutter-sm-width:        15px !default;

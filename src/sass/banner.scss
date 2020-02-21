@@ -1,0 +1,51 @@
+@import "config";
+
+.banner {
+    background-image: url("../assets/banner-photo.jpg");
+    background-size: cover;
+    background-position: center;
+    overflow: hidden;
+}
+
+.banner-content {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.banner-content > * {
+    margin: 20px 7.5px;
+    text-align: left;
+}
+
+@media (min-width: map-get($grid-breakpoints, "xs")) {
+    .banner {
+        height: 400px;
+    }
+    .banner-content, .banner-content > * {
+        align-items: center;
+        text-align: center;
+    }
+    .content-md {
+        display: none;
+    }
+}
+@media (min-width: map-get($grid-breakpoints, "sm")) {
+    .banner {
+        height: 500px;
+    }
+    .banner-content, .banner-content > * {
+        align-items: start;
+        text-align: start;
+    }
+
+}
+@media (min-width: map-get($grid-breakpoints, "md")) {
+    .banner {
+        height: 600px;
+    }
+    .content-md {
+        display: inline;
+    }
+}

@@ -1,0 +1,25 @@
+@import "config";
+
+@mixin make-background-colors($background-colors: $colors) {
+  @each $color, $hex in $background-colors {
+    .bg-#{$color} {
+      background-color: $hex;
+    }
+  }
+}
+
+@mixin make-text-colors($text-colors: $colors) {
+  @each $color, $hex in $text-colors {
+    .text-#{$color} {
+      color: $hex;
+    }
+  }
+}
+
+@if $enable-background-colors {
+  @include make-background-colors()
+}
+
+@if $enable-text-colors {
+  @include make-text-colors()
+}

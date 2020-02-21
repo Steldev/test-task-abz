@@ -1,0 +1,66 @@
+@import "colors";
+@import "simple-grid";
+@import "typography";
+@import "nav";
+@import "banner";
+@import "button";
+@import "man-laptop";
+@import "user";
+@import "input";
+@import "modal";
+
+body {
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+.sector {
+    @media (min-width: map-get($grid-breakpoints, "xs")) {
+        padding: 80px 0;
+    }
+    @media (min-width: map-get($grid-breakpoints, "sm")) {
+        padding: 120px 0;
+    }
+    @media (min-width: map-get($grid-breakpoints, "md")) {
+        padding: 160px 0;
+    }
+}
+
+.cheerful-users {
+    & .user > * {
+        overflow: hidden;
+        text-overflow: ellipsis;
+        max-width: 100%;
+        cursor: default;
+    }
+    & > h2 {
+        @media (min-width: map-get($grid-breakpoints, "xs")) {
+            margin-bottom: 40px;
+        }
+        @media (min-width: map-get($grid-breakpoints, "sm")) {
+            margin-bottom: 80px;
+        }
+    }
+}
+
+.reg-form {
+    max-width: 470px;
+    & > * {
+        display: flex;
+        width: 100%;
+    }
+    & > .button {
+        margin: auto;
+    }
+}
+
+footer {
+    & > hr {
+        margin: 0;
+        border: 0.5px solid #b2b9c0;
+    }
+    & > p {
+        text-align: center;
+    }
+
+}
